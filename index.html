@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Калькулятор рассрочки&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f9f9f9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 10px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>input[type="number"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>select {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>input[type="checkbox"] {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-right: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #28a745;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #218838;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f1f1f1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 480px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>input, select {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Калькулятор рассрочки&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Цена товара (₽):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="number" id="amount" placeholder="Введите сумму" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Срок рассрочки (месяцев):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;select id="months"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="3"&gt;3&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="4"&gt;4&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="5"&gt;5&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="6"&gt;6&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="7"&gt;7&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="8"&gt;8&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="9"&gt;9&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="10"&gt;10&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="11"&gt;11&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;option value="12"&gt;12&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="checkbox" id="withDownPayment" checked /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>С первым взносом (25%)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/label&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="calculate()"&gt;Рассчитать&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result" id="result"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const interestWithDown = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>3: 9, 4: 12, 5: 15, 6: 18,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>7: 20.5, 8: 23, 9: 25.5,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>10: 28, 11: 30.5, 12: 33</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const interestWithoutDown = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>3: 12, 4: 16, 5: 20, 6: 24,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>7: 27, 8: 30, 9: 33,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>10: 36, 11: 39, 12: 42</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculate() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const baseAmount = parseFloat(document.getElementById('amount').value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const months = parseInt(document.getElementById('months').value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const withDP = document.getElementById('withDownPayment').checked;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (isNaN(baseAmount) || baseAmount &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('result').innerHTML = "Введите корректную сумму.";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Надбавка по диапазонам</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let surcharge = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (baseAmount &lt; 100000) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>surcharge = 2000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (baseAmount &lt;= 200000) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>surcharge = 4000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>surcharge = 5000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const adjustedAmount = baseAmount + surcharge;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const interest = withDP ? interestWithDown[months] : interestWithoutDown[months];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const total = adjustedAmount * (1 + interest / 100);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const downPayment = withDP ? total * 0.25 : 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const monthly = (total - downPayment) / months;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('result').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Сумма с надбавкой:&lt;/strong&gt; ${adjustedAmount.toFixed(2)} ₽&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Надбавка:&lt;/strong&gt; ${surcharge} ₽&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Процент по рассрочке:&lt;/strong&gt; ${interest}%&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Итоговая сумма с процентами:&lt;/strong&gt; ${total.toFixed(2)} ₽&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Первый взнос:&lt;/strong&gt; ${downPayment.toFixed(2)} ₽&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Ежемесячный платёж:&lt;/strong&gt; ${monthly.toFixed(2)} ₽</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;<span class="Apple-converted-space">  </span>пи<span class="Apple-converted-space"> </span></p>
+</body>
+</html>
